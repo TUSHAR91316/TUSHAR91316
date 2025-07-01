@@ -17,5 +17,5 @@ Here are some ideas to get you started:
 ### Github Streaks
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=dark" width="48%" >
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=TUSHAR91316&show_icons=true&locale=en&layout=compact&theme=chartreuse-dark" alt="ovi" />
-![LeetCode Stats](https://leetcard.jacoblin.cool/tushar123913?theme=dark&font=Akshar&ext=heatmap)
+[![Leetcode Stats](https://leetcard.jacoblin.cool/tushar123913)](https://leetcode.com/tushar123913)
 
