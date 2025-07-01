@@ -17,5 +17,5 @@ Here are some ideas to get you started:
 ### Github Streaks
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=dark" width="48%" >
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=TUSHAR91316&show_icons=true&locale=en&layout=compact&theme=chartreuse-dark" alt="ovi" />
-<a href="https://readme-jokes.vercel.app"><img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes"></a>
+[![KnlnKS's LeetCode stats](https://leetcode-stats-six.vercel.app/api?username=Tushar)](https://github.com/madushadhanushka/github-readme)
 
