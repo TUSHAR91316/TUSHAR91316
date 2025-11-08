@@ -5,8 +5,7 @@
 🚀 Passionate about building **privacy-focused**, **AI-powered**, and **real-time** cybersecurity applications.  
 💻 I enjoy creating tools that bridge the gap between **offensive & defensive security**.  
 🔒 Currently working on:  
-- 🧬 AI-based Malware Detection & Threat Intelligence Platform  
-- 🧱 Dynamic Firewall using SDN (C++ + Ryu)  
+- 🧬 AI-based Malware Detection & Threat Intelligence Platform   
 ---
 
 ### ⚙️ Tech Stack
