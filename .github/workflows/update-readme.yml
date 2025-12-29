@@ -38,12 +38,22 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      
           git add README.md
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "Update tech stack dynamically"
-            # Explicitly authenticate with the token for the push
-            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-            git push
+            exit 0
           fi
+      
+          git commit -m "Update tech stack dynamically"
+      
+          # Compute branch name and authenticate the remote for fetch/push
+          BRANCH=${GITHUB_REF##*/}
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+      
+          # Integrate remote changes and push
+          git fetch origin $BRANCH
+          git rebase origin/$BRANCH
+      
+          # If rebase succeeds, push the updated head to the branch
+          git push origin HEAD:$BRANCH
