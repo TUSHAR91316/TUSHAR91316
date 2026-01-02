@@ -40,17 +40,8 @@ I enjoy working across the stack — from system-level programming to modern app
 ## 🛠️ Tech Stack
 
 <div align="center">
-
-| Domain | Technologies |
-|------|-------------|
-| **Languages** | C++, Python, TypeScript, SQL |
-| **Frontend** | HTML, CSS, Flutter |
-| **Backend** | Node.js, REST APIs |
-| **Databases** | MySQL, SQLite |
-| **AI / ML** | Machine Learning fundamentals |
-| **Tools** | Git, GitHub, VS Code |
-| **Platforms** | Linux, Windows |
-
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TUSHAR91316&theme=synthwave" height="180"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=TUSHAR91316&theme=synthwave" height="180"/>
 </div>
 
 ---
