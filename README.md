@@ -29,12 +29,11 @@
 ## 👨‍💻 About Me
 
 I am a **Software Developer** passionate about building **efficient, scalable, and reliable applications**.  
-I enjoy working across the stack — from system-level programming to modern application development — and continuously learning new technologies.
+I enjoy working across the stack — from system-level programming to modern application development — and continuously improving code quality and performance.
 
-- 🔭 Currently working on real-world development projects  
-- 🌱 Exploring advanced system design & AI-based applications  
-- 💡 Interested in performance optimization and clean architecture  
-- 🤝 Open to collaboration on impactful projects  
+- 🔭 Working on real-world development projects  
+- 🌱 Learning advanced system design & AI-powered applications  
+- 🤝 Open to collaboration on impactful software projects  
 
 ---
 
@@ -56,18 +55,17 @@ I enjoy working across the stack — from system-level programming to modern app
 
 ---
 
-## 📊 GitHub Analytics
+## 📊 GitHub Overview
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TUSHAR91316&theme=synthwave" height="160"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TUSHAR91316&theme=synthwave" height="160"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TUSHAR91316&theme=synthwave" width="100%"/>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=TUSHAR91316&show_icons=true&theme=tokyonight&hide_border=true&title_color=00ffcc&icon_color=00ffcc" height="150"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=tokyonight&hide_border=true&ring=00ffcc&fire=00ffcc" height="150"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TUSHAR91316&theme=synthwave" height="160"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TUSHAR91316&theme=synthwave" height="160"/>
 </div>
 
 ---
