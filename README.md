@@ -54,31 +54,29 @@ I'm a **Computer Science undergraduate** specialized in **backend engineering, d
 
 ## 🚀 Featured Projects
 
-### 🔹 [Konvert – Secure File Conversion Platform](https://github.com/TUSHAR91316/Konvert) (Placeholder Link)
+### 1️⃣ [Konvert – Secure File Conversion Platform](https://github.com/TUSHAR91316/converter_app)
 **Tech:** FastAPI • Flutter • Docker • SQLite
 
 *Designed a scalable backend for secure file processing and malware scanning.*
 - ⚡ **Optimization:** Reduced storage usage by **~80%** using efficient compression algorithms.
 - 🔒 **Security:** Integrated **VirusTotal API** for real-time malware scanning of uploaded files.
 - 🐳 **Scalability:** Dockerized document pipelines to ensure isolation and system reliability.
-- 🚀 **Performance:** Implemented a caching layer to serve repeat requests instantly.
 
-### 🔹 [AI-Based Intrusion Detection System](https://github.com/TUSHAR91316/NIDS) (Placeholder Link)
+### 2️⃣ [AI-Based Intrusion Detection System](https://github.com/TUSHAR91316/AI-BASED-NIDS)
 **Tech:** Python • Scikit-learn • Streamlit
 
 *A machine learning pipeline for detecting network anomalies and attacks.*
 - 🎯 **Accuracy:** Achieved **95%+ accuracy** on the **UNSW-NB15 dataset**.
 - 🛠️ **Engineering:** Extracted and engineered **15+ network features** from raw packet data.
 - 📊 **UI/UX:** Built a real-time visualization dashboard using Streamlit for monitoring traffic.
-- 🧠 **Modular Design:** Decoupled data processing, feature extraction, and inference logic.
 
-### 🔹 [Multi-Client TCP Chat Server](https://github.com/TUSHAR91316/TCP-Chat) (Placeholder Link)
-**Tech:** Python • Sockets • Threading
+### 3️⃣ [ShadowLink – Local Double-Encryption VPN](https://github.com/TUSHAR91316/ShadowLink)
+**Tech:** Python • CustomTkinter • AES-256-GCM • X25519
 
-*A robust, low-level chat architecture handling concurrent connections.*
-- 🔄 **Concurrency:** Supported **50+ active clients** simultaneously using threading.
-- 🛡️ **Reliability:** Implemented threat-safe message handling to prevent race conditions.
-- 🧪 **Testing:** Simulated high-load scenarios and unstable connections to ensure graceful recovery.
+*A specialized, local-only VPN tunnel designed for maximum privacy and traffic obfuscation.*
+- 🛡️ **Double Encryption:** Wraps traffic in AES-256-GCM before it hits the network card.
+- 🔑 **Ephemeral Keys:** Uses X25519 for key exchange; keys are wiped from RAM on disconnect.
+- 🚫 **Strict Mode:** Built-in kill switch and system-wide proxy routing for zero-leak operations.
 
 ---
 
