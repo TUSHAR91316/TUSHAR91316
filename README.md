@@ -1,10 +1,12 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=00ffcc,00332c&height=140&section=header" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00332c&height=140&section=header" width="100%"/>
   
-  <h1>Hi 👋, I'm Tushar</h1>
-  <h3>Backend Engineer • Systems Developer • ML Enthusiast</h3>
+  <h1 align="center">Hi 👋, I'm Tushar</h1>
+  <h3 align="center">Backend Engineer • Systems Developer • ML Enthusiast</h3>
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FFCC&center=true&vCenter=true&width=750&lines=Building+Scalable+Backend+Systems;FastAPI+%7C+Python+%7C+Distributed+Systems;Machine+Learning+%7C+Networking+%7C+DevOps;Turning+Ideas+into+Production-Ready+Software" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=500&size=20&duration=4000&pause=1000&color=00FFCC&center=true&vCenter=true&width=750&lines=Building+Scalable+Backend+Systems;FastAPI+%7C+Python+%7C+Distributed+Systems;Machine+Learning+%7C+Networking+%7C+DevOps;Turning+Ideas+into+Production-Ready+Software" alt="Typing SVG" />
+
+  <br><br>
 
   <p align="center">
     <a href="https://github.com/TUSHAR91316"><img src="https://img.shields.io/github/followers/TUSHAR91316?label=Followers&style=for-the-badge&color=00332c&logo=github" alt="GitHub Followers"/></a>
@@ -13,13 +15,13 @@
   </p>
 </div>
 
----
+<br>
 
-<table width="100%">
+<table width="100%" style="border-collapse: collapse; border: none;">
 <tr>
-<td width="60%" valign="top">
+<td width="55%" valign="top">
 
-## 💡 About Me
+### 💡 About Me
 I'm a **Computer Science undergraduate** passionate about building scalable software systems, high-performance APIs, secure networking solutions, and machine learning applications. I enjoy solving complex engineering problems through clean architecture, asynchronous programming, and efficient system design.
 
 **🎯 Areas of Interest:**
@@ -33,25 +35,25 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 - Advanced FastAPI Architectures
 
 </td>
-<td width="40%" valign="top">
+<td width="45%" valign="top">
 
-## 📈 Engineering Principles
+### 📈 Engineering Principles
 > *"Turning Ideas into Production-Ready Software"*
 
-- ✓ Clean Architecture
-- ✓ Security by Design
-- ✓ API-First Development
-- ✓ Performance Optimization
-- ✓ Scalable System Design
-- ✓ Test-Driven Thinking
+- 🏗️ **Clean Architecture:** Building modular and maintainable systems.
+- 🛡️ **Security by Design:** Prioritizing data integrity and privacy.
+- 🔗 **API-First Development:** Designing robust, scalable interfaces.
+- ⚡ **Performance Optimization:** Ensuring high throughput and low latency.
+- 📐 **Scalable System Design:** Architecting for future growth.
+- 🧪 **Test-Driven Thinking:** Validating logic through rigorous testing.
 
 </td>
 </tr>
 </table>
 
----
+<br>
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 <!-- TECH-STACK:START -->
 <div align="center">
@@ -65,39 +67,39 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 </div>
 <!-- TECH-STACK:END -->
 
----
+<br>
 
-## 🚀 Featured Projects
+### 🚀 Featured Projects
 
-| 🔐 [ShadowLink](https://github.com/TUSHAR91316/ShadowLink) | 📁 [Konvert](https://github.com/TUSHAR91316/converter_app) | 🛡️ [AI-Based NIDS](https://github.com/TUSHAR91316/AI-BASED-NIDS) |
+| 🔐 [ShadowLink](https://github.com/TUSHAR91316/ShadowLink) | 📁 [Konvert](https://github.com/TUSHAR91316/converter_app) | 🔍 [ClearTerms](https://github.com/TUSHAR91316/ClearTerms) |
 | :--- | :--- | :--- |
-| **Secure Local VPN Tunnel**<br><br>Double-layer encrypted tunnel architecture using AES-256-GCM & X25519. Supports UDP/TCP relay with a leak-resistant design. | **Secure File Processing Platform**<br><br>Scalable conversion platform with FastAPI & Flutter. Features Dockerized pipelines and VirusTotal malware scanning. | **Network Intrusion Detection**<br><br>ML-powered IDS achieving 95%+ accuracy. Real-time monitoring dashboard trained on the UNSW-NB15 dataset. |
-| `Python` `Cryptography` `VPN` | `FastAPI` `Flutter` `Docker` | `Python` `Scikit-Learn` `Streamlit` |
+| **Decentralized VPN Tunnel**<br><br>Secure, serverless dVPN built in Go. Uses multi-hop Onion Routing and a Kademlia DHT for untraceable privacy. | **Secure File Processing App**<br><br>Privacy-focused app with a hybrid engine. Processes sensitive files locally on-device ensuring zero data leakage. | **AI Privacy Policy Analyzer**<br><br>Instantly detect risks and hidden clauses using Multi-Model agents. Built with Pydantic AI & Next.js. |
+| `Go` `P2P` `Onion-Routing` | `Flutter` `FastAPI` `Docker` | `Python` `Next.js` `LLMs` |
+| 🎵 [Void-Player](https://github.com/TUSHAR91316/Void-Player) | 🛡️ [AI-Based NIDS](https://github.com/TUSHAR91316/AI-BASED-NIDS) | |
+| **Modern Music Player**<br><br>Professional music player built with Kotlin Multiplatform and Compose Multiplatform for Android and Desktop. | **Network Intrusion Detection**<br><br>ML-powered IDS achieving 95%+ accuracy. Real-time monitoring dashboard trained on the UNSW-NB15 dataset. | |
+| `Kotlin` `Compose` `Android` | `Python` `Scikit-Learn` `Streamlit` | |
 
----
+<br>
 
-## 📊 GitHub Analytics
+### 📊 GitHub Analytics
 
 <div align="center">
   <!-- Dynamic GitHub Metrics generated by Action (stats, languages, trophies) -->
-  <img src="github-metrics.svg" alt="GitHub Metrics" />
+  <img src="github-metrics.svg" alt="GitHub Metrics" width="850" />
 </div>
 
 <br>
 
 <div align="center">
-  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
+  <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TUSHAR91316&theme=tokyo-night&hide_border=true&bg_color=0D1117" alt="Contribution Graph" width="850"/>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TUSHAR91316&theme=tokyo-night&hide_border=true&bg_color=0D1117" alt="Contribution Graph" width="100%"/>
-</div>
-
----
-
-<div align="center">
-  <h3>🚀 Building Secure Systems • Scalable APIs • Intelligent Applications</h3>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=00ffcc,00332c&height=120&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00332c&height=120&section=footer" width="100%"/>
 </div>
