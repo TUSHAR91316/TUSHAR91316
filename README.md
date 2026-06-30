@@ -53,20 +53,17 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 
 ## 🛠️ Tech Stack
 
+<!-- TECH-STACK:START -->
 <div align="center">
-  
-  **Languages** <br>
-  <img src="https://skillicons.dev/icons?i=python,cpp,dart,mysql" alt="Languages" />
-  
-  <br><br>
-  **Backend & DevOps** <br>
-  <img src="https://skillicons.dev/icons?i=fastapi,flask,docker,linux,git,github" alt="Backend and DevOps" />
-  
-  <br><br>
-  **Data & Machine Learning** <br>
-  <img src="https://skillicons.dev/icons?i=tensorflow" alt="ML" />
+
+| **Domain** | **Technologies** |
+| :--- | :--- |
+| **Languages** | ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white) ![Dart](https://img.shields.io/badge/dart-gray?style=flat&logo=dart&logoColor=white) ![Java](https://img.shields.io/badge/java-gray?style=flat&logo=java&logoColor=white) ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Kotlin](https://img.shields.io/badge/kotlin-gray?style=flat&logo=kotlin&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![Typescript](https://img.shields.io/badge/typescript-gray?style=flat&logo=typescript&logoColor=white) |
+| **Frontend** | ![Html](https://img.shields.io/badge/html-gray?style=flat&logo=html&logoColor=white) |
+| **Backend & Cloud** | ![Fastapi](https://img.shields.io/badge/fastapi-gray?style=flat&logo=fastapi&logoColor=white) |
 
 </div>
+<!-- TECH-STACK:END -->
 
 ---
 
@@ -82,18 +79,18 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=TUSHAR91316&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
+  <img height="170" src="https://YOUR-GITHUB-STATS-DOMAIN.vercel.app/api?username=TUSHAR91316&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
   <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TUSHAR91316&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top Languages" />
+  <img src="https://YOUR-GITHUB-STATS-DOMAIN.vercel.app/api/top-langs/?username=TUSHAR91316&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top Languages" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=TUSHAR91316&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=15" alt="GitHub Trophies" />
+  <img src="https://YOUR-GITHUB-TROPHIES-DOMAIN.vercel.app/?username=TUSHAR91316&theme=tokyonight&no-frame=true&row=1&column=6&margin-w=15" alt="GitHub Trophies" />
 </div>
 
 <br>
