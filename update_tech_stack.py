@@ -11,16 +11,19 @@ README_PATH = "README.md"
 # All keywords should be lowercase for matching
 CATEGORIES = {
     "Languages": {
-        "python", "c++", "c", "javascript", "typescript", "dart", "java", "kotlin", "swift", "go", "rust"
+        "python", "c++", "c", "c#", "javascript", "typescript", "dart", "java", "kotlin", "swift", "go", "golang", "rust"
     },
     "Frontend": {
-        "flutter", "react", "tailwindcss", "html", "css", "vue", "angular", "next.js", "bootstrap", "material-ui"
+        "flutter", "react", "tailwindcss", "html", "css", "vue", "angular", "next.js", "nextjs", "bootstrap", "material-ui"
     },
     "Backend & Cloud": {
-        "firebase", "docker", "nginx", "redis", "django", "flask", "fastapi", "node", "express", "aws", "gcp", "azure", "mongodb", "postgresql", "mysql"
+        "firebase", "docker", "docker-container", "nginx", "redis", "django", "flask", "fastapi", "node", "express", "aws", "gcp", "azure", "mongodb", "postgresql", "mysql", "vercel"
+    },
+    "AI & Machine Learning": {
+        "tensorflow", "pytorch", "scikit-learn", "llm", "ai-agent", "pydantic-ai"
     },
     "Security & OS": {
-        "linux", "git", "kali", "wireshark", "metasploit", "bash", "shell", "powershell", "nmap", "burp suite"
+        "linux", "git", "kali", "wireshark", "metasploit", "bash", "shell", "powershell", "nmap", "burp suite", "vpn", "onion-routing"
     }
 }
 
@@ -30,17 +33,30 @@ CATEGORIES = {
 BADGE_MAP = {
     "python": "Python-3776AB?style=flat&logo=python&logoColor=white",
     "c++": "C++-00599C?style=flat&logo=c%2B%2B&logoColor=white",
+    "c#": "C%23-239120?style=flat&logo=c-sharp&logoColor=white",
     "javascript": "JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black",
+    "typescript": "TypeScript-3178C6?style=flat&logo=typescript&logoColor=white",
+    "dart": "Dart-0175C2?style=flat&logo=dart&logoColor=white",
+    "java": "Java-ED8B00?style=flat&logo=java&logoColor=white",
+    "kotlin": "Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white",
+    "go": "Go-00ADD8?style=flat&logo=go&logoColor=white",
+    "golang": "Go-00ADD8?style=flat&logo=go&logoColor=white",
     "flutter": "Flutter-02569B?style=flat&logo=flutter&logoColor=white",
     "react": "React-20232A?style=flat&logo=react&logoColor=61DAFB",
     "tailwindcss": "Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white",
+    "html": "HTML5-E34F26?style=flat&logo=html5&logoColor=white",
+    "nextjs": "Next.js-000000?style=flat&logo=nextdotjs&logoColor=white",
     "firebase": "Firebase-FFCA28?style=flat&logo=firebase&logoColor=black",
     "docker": "Docker-2496ED?style=flat&logo=docker&logoColor=white",
+    "docker-container": "Docker-2496ED?style=flat&logo=docker&logoColor=white",
+    "fastapi": "FastAPI-009688?style=flat&logo=fastapi&logoColor=white",
+    "vercel": "Vercel-000000?style=flat&logo=vercel&logoColor=white",
     "nginx": "Nginx-009639?style=flat&logo=nginx&logoColor=white",
     "redis": "Redis-DC382D?style=flat&logo=redis&logoColor=white",
     "linux": "Linux-FCC624?style=flat&logo=linux&logoColor=black",
     "git": "Git-F05032?style=flat&logo=git&logoColor=white",
-    "kali": "Kali_Linux-557C94?style=flat&logo=kali-linux&logoColor=white"
+    "kali": "Kali_Linux-557C94?style=flat&logo=kali-linux&logoColor=white",
+    "vpn": "VPN-4CAF50?style=flat&logo=openvpn&logoColor=white"
 }
 
 def fetch_repos():
