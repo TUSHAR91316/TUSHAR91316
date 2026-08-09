@@ -6,7 +6,7 @@
 
   <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=500&size=20&duration=4000&pause=1000&color=00FFCC&center=true&vCenter=true&width=750&lines=Building+Scalable+Backend+Systems;FastAPI+%7C+Python+%7C+Distributed+Systems;Machine+Learning+%7C+Networking+%7C+DevOps;Turning+Ideas+into+Production-Ready+Software" alt="Typing SVG" />
 
-  <img width="100%" height="20" src="https://empty-image-server.vercel.app/1x1.png" />
+  <br><br>
 
   <p align="center">
     <a href="https://github.com/TUSHAR91316"><img src="https://img.shields.io/github/followers/TUSHAR91316?label=Followers&style=for-the-badge&color=00332c&logo=github" alt="GitHub Followers"/></a>
@@ -15,7 +15,7 @@
   </p>
 </div>
 
-<img width="100%" height="30" src="https://empty-image-server.vercel.app/1x1.png" />
+<br>
 
 ### 💡 About Me
 I'm a **Computer Science undergraduate** passionate about building scalable software systems, high-performance APIs, secure networking solutions, and machine learning applications. I enjoy solving complex engineering problems through clean architecture, asynchronous programming, and efficient system design.
@@ -45,7 +45,7 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 
 </details>
 
-<img width="100%" height="30" src="https://empty-image-server.vercel.app/1x1.png" />
+<br>
 
 ### 🛠️ Tech Stack
 
@@ -63,7 +63,7 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 </div>
 <!-- TECH-STACK:END -->
 
-<img width="100%" height="30" src="https://empty-image-server.vercel.app/1x1.png" />
+<br>
 
 ### 🚀 Featured Projects
 
@@ -79,7 +79,7 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 | :--- |
 | **Network Intrusion Detection**<br>ML-powered IDS achieving 95%+ accuracy. Real-time monitoring dashboard trained on the UNSW-NB15 dataset.<br><br><kbd>Python</kbd> <kbd>Scikit-Learn</kbd> <kbd>Streamlit</kbd> |
 
-<img width="100%" height="30" src="https://empty-image-server.vercel.app/1x1.png" />
+<br>
 
 ### 📊 GitHub Analytics
 
@@ -88,7 +88,7 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
   <img src="github-metrics.svg" alt="GitHub Metrics" width="850" />
 </div>
 
-<img width="100%" height="20" src="https://empty-image-server.vercel.app/1x1.png" />
+<br>
 
 <div align="center">
   <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
@@ -98,7 +98,7 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=TUSHAR91316&theme=tokyo-night&hide_border=true&bg_color=0D1117" alt="Contribution Graph" width="850"/>
 </div>
 
-<img width="100%" height="20" src="https://empty-image-server.vercel.app/1x1.png" />
+<br>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=00332c&height=120&section=footer" width="100%"/>
