@@ -31,32 +31,32 @@ CATEGORIES = {
 # Format: "keyword": "Badge String"
 # If not found, a default badge will be generated
 BADGE_MAP = {
-    "python": "Python-3776AB?style=flat&logo=python&logoColor=white",
-    "c++": "C++-00599C?style=flat&logo=c%2B%2B&logoColor=white",
-    "c#": "C%23-239120?style=flat&logo=c-sharp&logoColor=white",
-    "javascript": "JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black",
-    "typescript": "TypeScript-3178C6?style=flat&logo=typescript&logoColor=white",
-    "dart": "Dart-0175C2?style=flat&logo=dart&logoColor=white",
-    "java": "Java-ED8B00?style=flat&logo=java&logoColor=white",
-    "kotlin": "Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white",
-    "go": "Go-00ADD8?style=flat&logo=go&logoColor=white",
-    "golang": "Go-00ADD8?style=flat&logo=go&logoColor=white",
-    "flutter": "Flutter-02569B?style=flat&logo=flutter&logoColor=white",
-    "react": "React-20232A?style=flat&logo=react&logoColor=61DAFB",
-    "tailwindcss": "Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white",
-    "html": "HTML5-E34F26?style=flat&logo=html5&logoColor=white",
-    "nextjs": "Next.js-000000?style=flat&logo=nextdotjs&logoColor=white",
-    "firebase": "Firebase-FFCA28?style=flat&logo=firebase&logoColor=black",
-    "docker": "Docker-2496ED?style=flat&logo=docker&logoColor=white",
-    "docker-container": "Docker-2496ED?style=flat&logo=docker&logoColor=white",
-    "fastapi": "FastAPI-009688?style=flat&logo=fastapi&logoColor=white",
-    "vercel": "Vercel-000000?style=flat&logo=vercel&logoColor=white",
-    "nginx": "Nginx-009639?style=flat&logo=nginx&logoColor=white",
-    "redis": "Redis-DC382D?style=flat&logo=redis&logoColor=white",
-    "linux": "Linux-FCC624?style=flat&logo=linux&logoColor=black",
-    "git": "Git-F05032?style=flat&logo=git&logoColor=white",
-    "kali": "Kali_Linux-557C94?style=flat&logo=kali-linux&logoColor=white",
-    "vpn": "VPN-4CAF50?style=flat&logo=openvpn&logoColor=white"
+    "python": "Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
+    "c++": "C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white",
+    "c#": "C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white",
+    "javascript": "JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+    "typescript": "TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white",
+    "dart": "Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white",
+    "java": "Java-ED8B00?style=for-the-badge&logo=java&logoColor=white",
+    "kotlin": "Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white",
+    "go": "Go-00ADD8?style=for-the-badge&logo=go&logoColor=white",
+    "golang": "Go-00ADD8?style=for-the-badge&logo=go&logoColor=white",
+    "flutter": "Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white",
+    "react": "React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+    "tailwindcss": "Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white",
+    "html": "HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+    "nextjs": "Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white",
+    "firebase": "Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black",
+    "docker": "Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
+    "docker-container": "Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
+    "fastapi": "FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white",
+    "vercel": "Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white",
+    "nginx": "Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white",
+    "redis": "Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white",
+    "linux": "Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black",
+    "git": "Git-F05032?style=for-the-badge&logo=git&logoColor=white",
+    "kali": "Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white",
+    "vpn": "VPN-4CAF50?style=for-the-badge&logo=openvpn&logoColor=white"
 }
 
 def fetch_repos():
@@ -126,7 +126,7 @@ def generate_markdown(categorized_tech):
         for item in items:
             # Generate badge URL
             # Use mapped style or default style
-            style = BADGE_MAP.get(item, f"{item.replace('-', '--')}-gray?style=flat&logo={item}&logoColor=white")
+            style = BADGE_MAP.get(item, f"{item.replace('-', '--')}-gray?style=for-the-badge&logo={item}&logoColor=white")
             badge_md = f"![{item.title()}](https://img.shields.io/badge/{style})"
             badges.append(badge_md)
             
