@@ -1,15 +1,25 @@
-import requests
 import os
 import re
+import sys
+import requests
+from typing import Dict, List, Set, Optional
+from collections import defaultdict
 
-# Configuration
-GITHUB_USERNAME = "TUSHAR91316"
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-README_PATH = "README.md"
+# ==========================================
+# Configuration & Constants
+# ==========================================
+GITHUB_USERNAME: str = os.getenv("GITHUB_USERNAME", "TUSHAR91316")
+GITHUB_TOKEN: Optional[str] = os.getenv("GITHUB_TOKEN")
+README_PATH: str = "README.md"
+API_URL: str = "https://api.github.com/users/{}/repos"
 
-# Mappings: Define which keywords belong to which category
-# All keywords should be lowercase for matching
-CATEGORIES = {
+# Pre-compile regex for performance
+MARKER_PATTERN = re.compile(
+    r"(<!-- TECH-STACK:START -->)(.*?)(<!-- TECH-STACK:END -->)",
+    re.DOTALL
+)
+
+CATEGORIES: Dict[str, Set[str]] = {
     "Languages": {
         "python", "c++", "c", "c#", "javascript", "typescript", "dart", "java", "kotlin", "swift", "go", "golang", "rust"
     },
@@ -27,10 +37,7 @@ CATEGORIES = {
     }
 }
 
-# Icon mapping for shields.io (Optional: Add specific colors/logos if needed)
-# Format: "keyword": "Badge String"
-# If not found, a default badge will be generated
-BADGE_MAP = {
+BADGE_MAP: Dict[str, str] = {
     "python": "Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
     "c++": "C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white",
     "c#": "C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white",
@@ -59,118 +66,145 @@ BADGE_MAP = {
     "vpn": "VPN-4CAF50?style=for-the-badge&logo=openvpn&logoColor=white"
 }
 
-def fetch_repos():
-    """Fetch all public repositories for the user."""
-    headers = {}
-    if GITHUB_TOKEN:
-        headers["Authorization"] = f"token {GITHUB_TOKEN}"
-    
-    repos = []
-    page = 1
-    while True:
-        url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos?per_page=100&page={page}"
-        response = requests.get(url, headers=headers)
-        if response.status_code != 200:
-            print(f"Error fetching repos: {response.text}")
-            break
-        data = response.json()
-        if not data:
-            break
-        repos.extend(data)
-        page += 1
-    return repos
+class TechStackUpdater:
+    def __init__(self, username: str, token: Optional[str] = None):
+        self.username = username
+        self.token = token
+        # O(1) Optimization: Pre-compute reverse mapping for instant lookups
+        self.keyword_to_category: Dict[str, str] = {
+            keyword: category
+            for category, keywords in CATEGORIES.items()
+            for keyword in keywords
+        }
 
-def extract_technologies(repos):
-    """Scan repos for languages and topics."""
-    detected_tech = set()
-    
-    # 1. Add top languages from all repos
-    for repo in repos:
-        if repo.get("language"):
-            detected_tech.add(repo["language"].lower())
+    def fetch_repos(self) -> List[Dict]:
+        """Fetch all public repositories for the user with robust error handling."""
+        headers: Dict[str, str] = {"Accept": "application/vnd.github.v3+json"}
+        if self.token:
+            headers["Authorization"] = f"token {self.token}"
         
-        # 2. Add topics (repo tags)
-        for topic in repo.get("topics", []):
-            detected_tech.add(topic.lower())
+        repos: List[Dict] = []
+        page: int = 1
+        
+        print(f"Fetching repositories for {self.username}...")
+        
+        with requests.Session() as session:
+            session.headers.update(headers)
+            while True:
+                url = f"{API_URL.format(self.username)}?per_page=100&page={page}"
+                try:
+                    response = session.get(url, timeout=10)
+                    response.raise_for_status()
+                    
+                    data = response.json()
+                    if not data:
+                        break  # No more pages
+                        
+                    repos.extend(data)
+                    page += 1
+                except requests.exceptions.HTTPError as e:
+                    print(f"HTTP Error fetching repos: {e.response.status_code} - {e.response.text}", file=sys.stderr)
+                    break
+                except requests.exceptions.RequestException as e:
+                    print(f"Network error while fetching repos: {e}", file=sys.stderr)
+                    break
+                    
+        print(f"Found {len(repos)} repositories.")
+        return repos
+
+    def extract_technologies(self, repos: List[Dict]) -> Set[str]:
+        """Scan repositories for languages and topics."""
+        detected_tech: Set[str] = set()
+        
+        for repo in repos:
+            language = repo.get("language")
+            if language:
+                detected_tech.add(language.lower())
             
-    return detected_tech
+            topics = repo.get("topics", [])
+            for topic in topics:
+                detected_tech.add(topic.lower())
+                
+        print(f"Detected {len(detected_tech)} unique technologies/topics.")
+        return detected_tech
 
-def categorize_tech(detected_tech):
-    """Sort detected technologies into categories."""
-    categorized = {cat: [] for cat in CATEGORIES}
-    
-    for tech in detected_tech:
-        found = False
-        for cat, keywords in CATEGORIES.items():
-            if tech in keywords:
-                categorized[cat].append(tech)
-                found = True
-                break
-        # Optional: Log unclassified tech if needed
-        # if not found: print(f"Unclassified: {tech}")
-    
-    # Sort for consistency
-    for cat in categorized:
-        categorized[cat].sort()
+    def categorize_tech(self, detected_tech: Set[str]) -> Dict[str, List[str]]:
+        """Sort detected technologies into categories using O(1) lookup."""
+        categorized: Dict[str, List[str]] = defaultdict(list)
         
-    return categorized
+        for tech in detected_tech:
+            # O(1) instant lookup
+            category = self.keyword_to_category.get(tech)
+            if category:
+                categorized[category].append(tech)
+                
+        # Sort internal lists and return standard dict
+        return {cat: sorted(items) for cat, items in categorized.items()}
 
-def generate_markdown(categorized_tech):
-    """Generate the markdown table."""
-    markdown = '<div align="center">\n\n| **Domain** | **Technologies** |\n| :--- | :--- |\n'
-    
-    for cat, items in categorized_tech.items():
-        if not items: continue # Skip empty categories
+    def generate_markdown(self, categorized_tech: Dict[str, List[str]]) -> str:
+        """Generate the markdown table payload."""
+        lines: List[str] = [
+            '<div align="center">',
+            '',
+            '| **Domain** | **Technologies** |',
+            '| :--- | :--- |'
+        ]
         
-        badges = []
-        for item in items:
-            # Generate badge URL
-            # Use mapped style or default style
-            style = BADGE_MAP.get(item, f"{item.replace('-', '--')}-gray?style=for-the-badge&logo={item}&logoColor=white")
-            badge_md = f"![{item.title()}](https://img.shields.io/badge/{style})"
-            badges.append(badge_md)
+        # Ensure categories always appear in the defined canonical order
+        for category in CATEGORIES.keys():
+            items = categorized_tech.get(category)
+            if not items:
+                continue
+                
+            badges: List[str] = []
+            for item in items:
+                # Use mapped style or generate dynamic default
+                style = BADGE_MAP.get(item, f"{item.replace('-', '--')}-gray?style=for-the-badge&logo={item}&logoColor=white")
+                badge_md = f"![{item.title()}](https://img.shields.io/badge/{style})"
+                badges.append(badge_md)
+                
+            lines.append(f"| **{category}** | {' '.join(badges)} |")
             
-        row = f"| **{cat}** | {' '.join(badges)} |\n"
-        markdown += row
+        lines.append('')
+        lines.append('</div>')
         
-    markdown += '\n</div>'
-    return markdown
+        return '\n'.join(lines)
 
-def update_readme(new_content):
-    """Update the README file between markers."""
-    if not os.path.exists(README_PATH):
-        print("README.md not found!")
-        return
+    def update_readme(self, new_content: str, filepath: str = README_PATH) -> None:
+        """Update the README file between the specific HTML comment markers."""
+        if not os.path.exists(filepath):
+            print(f"Error: '{filepath}' not found!", file=sys.stderr)
+            return
+            
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+            
+        if not MARKER_PATTERN.search(content):
+            print("Error: Markers not found in README.md. Please add <!-- TECH-STACK:START --> and <!-- TECH-STACK:END -->.", file=sys.stderr)
+            return
+            
+        replacement = f"\\1\n{new_content}\n\\3"
+        new_readme = MARKER_PATTERN.sub(replacement, content)
         
-    with open(README_PATH, "r", encoding="utf-8") as f:
-        content = f.read()
-        
-    pattern = r"(<!-- TECH-STACK:START -->)(.*?)(<!-- TECH-STACK:END -->)"
-    replacement = f"\\1\n{new_content}\n\\3"
-    
-    if re.search(pattern, content, re.DOTALL):
-        new_readme = re.sub(pattern, replacement, content, flags=re.DOTALL)
-        with open(README_PATH, "w", encoding="utf-8") as f:
+        with open(filepath, "w", encoding="utf-8") as f:
             f.write(new_readme)
-        print("README.md updated successfully.")
-    else:
-        print("Markers not found in README.md. Please add <!-- TECH-STACK:START --> and <!-- TECH-STACK:END -->.")
+            
+        print("README.md updated successfully!")
 
-def main():
-    print(f"Fetching repos for {GITHUB_USERNAME}...")
-    repos = fetch_repos()
-    print(f"Found {len(repos)} repositories.")
-    
-    detected = extract_technologies(repos)
-    print(f"Detected technologies: {detected}")
-    
-    categorized = categorize_tech(detected)
-    markdown_table = generate_markdown(categorized)
-    
-    print("Generated Markdown:")
-    print(markdown_table)
-    
-    update_readme(markdown_table)
+    def run(self) -> None:
+        """Main execution pipeline."""
+        repos = self.fetch_repos()
+        if not repos:
+            print("No repositories found or failed to fetch. Aborting update.")
+            return
+            
+        detected = self.extract_technologies(repos)
+        categorized = self.categorize_tech(detected)
+        markdown_table = self.generate_markdown(categorized)
+        
+        self.update_readme(markdown_table)
+
 
 if __name__ == "__main__":
-    main()
+    updater = TechStackUpdater(GITHUB_USERNAME, GITHUB_TOKEN)
+    updater.run()
