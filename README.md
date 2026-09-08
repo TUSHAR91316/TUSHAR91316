@@ -12,6 +12,7 @@
     <a href="https://github.com/TUSHAR91316"><img src="https://img.shields.io/github/followers/TUSHAR91316?label=Followers&style=for-the-badge&color=00332c&logo=github" alt="GitHub Followers"/></a>
     <a href="https://www.linkedin.com/in/tushar337/"><img src="https://img.shields.io/badge/LinkedIn-Connect-00332c?style=for-the-badge&logo=linkedin" alt="LinkedIn"/></a>
     <a href="mailto:tushar123913@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-00332c?style=for-the-badge&logo=gmail" alt="Email"/></a>
+    <img src="https://komarev.com/ghpvc/?username=TUSHAR91316&style=for-the-badge&color=00332c&label=Profile+Views" alt="Profile Views"/>
   </p>
 </div>
 
@@ -55,10 +56,10 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 | **Domain** | **Technologies** |
 | :--- | :--- |
 | **Languages** | ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white) ![Golang](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Typescript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) |
-| **Frontend** | ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![Html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Nextjs](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) |
-| **Backend & Cloud** | ![Docker-Container](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Fastapi](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) |
-| **AI & Machine Learning** | ![Ai-Agent](https://img.shields.io/badge/ai--agent-gray?style=for-the-badge&logo=ai-agent&logoColor=white) ![Llm](https://img.shields.io/badge/llm-gray?style=for-the-badge&logo=llm&logoColor=white) ![Pydantic-Ai](https://img.shields.io/badge/pydantic--ai-gray?style=for-the-badge&logo=pydantic-ai&logoColor=white) |
-| **Security & OS** | ![Onion-Routing](https://img.shields.io/badge/onion--routing-gray?style=for-the-badge&logo=onion-routing&logoColor=white) ![Vpn](https://img.shields.io/badge/VPN-4CAF50?style=for-the-badge&logo=openvpn&logoColor=white) |
+| **Frontend & Mobile** | ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![Html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) |
+| **Backend & Cloud** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Fastapi](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) |
+| **AI & Machine Learning** | ![AI Agents](https://img.shields.io/badge/AI_Agents-6C5CE7?style=for-the-badge&logo=openai&logoColor=white) ![LLMs](https://img.shields.io/badge/LLMs-10A37F?style=for-the-badge&logo=openai&logoColor=white) ![OpenRouter](https://img.shields.io/badge/OpenRouter-6566F1?style=for-the-badge&logo=openai&logoColor=white) ![Pydantic AI](https://img.shields.io/badge/Pydantic_AI-E92063?style=for-the-badge&logo=pydantic&logoColor=white) |
+| **Systems & Security** | ![DHT](https://img.shields.io/badge/DHT-00B4D8?style=for-the-badge&logo=apache&logoColor=white) ![Fault Tolerance](https://img.shields.io/badge/Fault_Tolerance-2E7D32?style=for-the-badge&logo=kubernetes&logoColor=white) ![Onion Routing](https://img.shields.io/badge/Onion_Routing-7D4698?style=for-the-badge&logo=tor-browser&logoColor=white) ![P2P](https://img.shields.io/badge/P2P-0052CC?style=for-the-badge&logo=ipfs&logoColor=white) ![Vpn](https://img.shields.io/badge/VPN-4CAF50?style=for-the-badge&logo=openvpn&logoColor=white) |
 
 </div>
 <!-- TECH-STACK:END -->
@@ -69,33 +70,25 @@ I'm a **Computer Science undergraduate** passionate about building scalable soft
 
 | 🔐 [ShadowLink](https://github.com/TUSHAR91316/ShadowLink) | 🔍 [ClearTerms](https://github.com/TUSHAR91316/ClearTerms) |
 | :--- | :--- |
-| **Decentralized VPN Tunnel**<br>Secure, serverless dVPN built in Go. Uses multi-hop Onion Routing and a Kademlia DHT for untraceable privacy.<br><br><kbd>Go</kbd> <kbd>P2P</kbd> <kbd>Onion-Routing</kbd> | **AI Privacy Policy Analyzer**<br>Instantly detect risks and hidden clauses using Multi-Model agents. Built with Pydantic AI & Next.js.<br><br><kbd>Python</kbd> <kbd>Next.js</kbd> <kbd>LLMs</kbd> |
-
+| **Decentralized VPN Tunnel**<br>Secure, serverless dVPN built in Go. Uses multi-hop Onion Routing and a Kademlia DHT for untraceable privacy.<br><br><kbd>Go</kbd> <kbd>P2P</kbd> <kbd>Onion-Routing</kbd> <kbd>DHT</kbd> | **AI Privacy Policy Analyzer**<br>Instantly detect risks and hidden clauses using Multi-Model agents. Built with Pydantic AI & Next.js.<br><br><kbd>Python</kbd> <kbd>FastAPI</kbd> <kbd>Next.js</kbd> <kbd>Pydantic-AI</kbd> |
 | 📁 [Konvert](https://github.com/TUSHAR91316/converter_app) | 🎵 [Void-Player](https://github.com/TUSHAR91316/Void-Player) |
-| :--- | :--- |
-| **Secure File Processing App**<br>Privacy-focused app with a hybrid engine. Processes sensitive files locally on-device ensuring zero data leakage.<br><br><kbd>Flutter</kbd> <kbd>FastAPI</kbd> <kbd>Docker</kbd> | **Modern Music Player**<br>Professional music player built with Kotlin Multiplatform and Compose Multiplatform for Android and Desktop.<br><br><kbd>Kotlin</kbd> <kbd>Compose</kbd> <kbd>Android</kbd> |
-
-| 🛡️ [AI-Based NIDS](https://github.com/TUSHAR91316/AI-BASED-NIDS) |
-| :--- |
-| **Network Intrusion Detection**<br>ML-powered IDS achieving 95%+ accuracy. Real-time monitoring dashboard trained on the UNSW-NB15 dataset.<br><br><kbd>Python</kbd> <kbd>Scikit-Learn</kbd> <kbd>Streamlit</kbd> |
+| **Secure File Processing App**<br>Privacy-focused app with a hybrid engine. Processes sensitive files locally on-device ensuring zero data leakage.<br><br><kbd>Flutter</kbd> <kbd>FastAPI</kbd> <kbd>Docker</kbd> | **Modern Music Player**<br>Professional music player built with Kotlin Multiplatform and Compose Multiplatform for Android and Desktop.<br><br><kbd>Kotlin</kbd> <kbd>Compose</kbd> <kbd>Android</kbd> <kbd>Desktop</kbd> |
+| 🗄️ [Fault-Tolerant Storage](https://github.com/TUSHAR91316/Fault_tolrent_storage) | 🛡️ [AI-Based NIDS](https://github.com/TUSHAR91316/AI-BASED-NIDS) |
+| **Distributed Replicated Storage**<br>High-availability storage system with triple replication across independent nodes, surviving node crashes seamlessly.<br><br><kbd>Distributed Systems</kbd> <kbd>Docker</kbd> <kbd>Fault Tolerance</kbd> | **Network Intrusion Detection**<br>Next-gen hybrid AI IDS (CNN + Autoencoder + Rules) achieving 95%+ accuracy for real-time threat detection.<br><br><kbd>Python</kbd> <kbd>Hybrid AI</kbd> <kbd>Scikit-Learn</kbd> <kbd>Streamlit</kbd> |
 
 <br>
 
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <!-- Dynamic GitHub Metrics generated by Action (stats, languages, trophies) -->
+  <!-- Dynamic GitHub Metrics generated natively by GitHub Action -->
   <img src="github-metrics.svg" alt="GitHub Metrics" width="850" />
 </div>
 
 <br>
 
 <div align="center">
-  <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TUSHAR91316&theme=tokyo-night&hide_border=true&bg_color=0D1117" alt="Contribution Graph" width="850"/>
+  <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=TUSHAR91316&theme=dark&background=0D1117&border=00332C&stroke=00332C&ring=00FFCC&fire=00FFCC&currStreakNum=00FFCC&sideNums=E6EDF3&currStreakLabel=00FFCC&sideLabels=8B949E&dates=8B949E&hide_border=true" alt="GitHub Streak" />
 </div>
 
 <br>
