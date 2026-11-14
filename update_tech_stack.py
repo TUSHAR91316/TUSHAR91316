@@ -13,9 +13,19 @@ GITHUB_TOKEN: Optional[str] = os.getenv("GITHUB_TOKEN")
 README_PATH: str = "README.md"
 API_URL: str = "https://api.github.com/users/{}/repos"
 
+RECENT_WORK_LIMIT: int = 5
+
+# Skills that should always appear, even if no public repo is tagged with them
+# (e.g. work that lives in private repos or store-only apps).
+ALWAYS_INCLUDE: Set[str] = {"flutter", "android", "linux", "git", "postgresql"}
+
 # Pre-compile regex for performance
 MARKER_PATTERN = re.compile(
     r"(<!-- TECH-STACK:START -->)(.*?)(<!-- TECH-STACK:END -->)",
+    re.DOTALL
+)
+RECENT_MARKER_PATTERN = re.compile(
+    r"(<!-- RECENT-WORK:START -->)(.*?)(<!-- RECENT-WORK:END -->)",
     re.DOTALL
 )
 
@@ -81,20 +91,20 @@ BADGE_MAP: Dict[str, str] = {
     
     # AI & Machine Learning
     "pydantic-ai": "Pydantic_AI-E92063?style=for-the-badge&logo=pydantic&logoColor=white",
-    "llm": "LLMs-10A37F?style=for-the-badge&logo=openai&logoColor=white",
-    "ai-agent": "AI_Agents-6C5CE7?style=for-the-badge&logo=openai&logoColor=white",
-    "openrouter": "OpenRouter-6566F1?style=for-the-badge&logo=openai&logoColor=white",
+    "llm": "LLMs-10A37F?style=for-the-badge",
+    "ai-agent": "AI_Agents-6C5CE7?style=for-the-badge",
+    "openrouter": "OpenRouter-6566F1?style=for-the-badge&logo=openrouter&logoColor=white",
     "scikit-learn": "Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white",
     "streamlit": "Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white",
     "tensorflow": "TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white",
     "pytorch": "PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white",
     
     # Systems & Security
-    "vpn": "VPN-4CAF50?style=for-the-badge&logo=openvpn&logoColor=white",
+    "vpn": "VPN-4CAF50?style=for-the-badge",
     "onion-routing": "Onion_Routing-7D4698?style=for-the-badge&logo=tor-browser&logoColor=white",
-    "p2p": "P2P-0052CC?style=for-the-badge&logo=ipfs&logoColor=white",
-    "dht": "DHT-00B4D8?style=for-the-badge&logo=apache&logoColor=white",
-    "fault-tolerance": "Fault_Tolerance-2E7D32?style=for-the-badge&logo=kubernetes&logoColor=white",
+    "p2p": "P2P-0052CC?style=for-the-badge",
+    "dht": "Kademlia_DHT-00B4D8?style=for-the-badge",
+    "fault-tolerance": "Fault_Tolerance-2E7D32?style=for-the-badge",
     "linux": "Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black",
     "git": "Git-F05032?style=for-the-badge&logo=git&logoColor=white",
     "kali": "Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white"
@@ -114,7 +124,7 @@ DISPLAY_NAMES: Dict[str, str] = {
     "docker-container": "Docker",
     "fault-tolerance": "Fault Tolerance",
     "p2p": "P2P",
-    "dht": "DHT",
+    "dht": "Kademlia DHT",
     "android-app": "Android"
 }
 
@@ -223,6 +233,43 @@ class TechStackUpdater:
         
         return '\n'.join(lines)
 
+    def generate_recent_work(self, repos: List[Dict]) -> str:
+        """List the most recently pushed original repositories (simonw-style activity feed)."""
+        own = [
+            r for r in repos
+            if not r.get("fork")
+            and not r.get("archived")
+            and r.get("name", "").lower() != self.username.lower()
+        ]
+        own.sort(key=lambda r: r.get("pushed_at") or "", reverse=True)
+
+        lines: List[str] = []
+        for repo in own[:RECENT_WORK_LIMIT]:
+            description = (repo.get("description") or "").strip().replace("|", "-")
+            if len(description) > 100:
+                description = description[:100].rsplit(" ", 1)[0].rstrip(".,;:") + "…"
+            pushed = (repo.get("pushed_at") or "")[:10]
+            entry = f"- [**{repo['name']}**]({repo['html_url']})"
+            if description:
+                entry += f" — {description}"
+            if pushed:
+                entry += f" <sub>· {pushed}</sub>"
+            lines.append(entry)
+        return "\n".join(lines)
+
+    def replace_section(self, pattern: "re.Pattern[str]", new_content: str, filepath: str = README_PATH) -> None:
+        """Replace the content between a pair of HTML comment markers, if present."""
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        if not pattern.search(content):
+            print(f"Markers for {pattern.pattern[:30]}... not found; skipping.", file=sys.stderr)
+            return
+
+        new_readme = pattern.sub(lambda m: f"{m.group(1)}\n{new_content}\n{m.group(3)}", content)
+        with open(filepath, "w", encoding="utf-8", newline="\n") as f:
+            f.write(new_readme)
+
     def update_readme(self, new_content: str, filepath: str = README_PATH) -> None:
         """Update the README file between the specific HTML comment markers."""
         if not os.path.exists(filepath):
@@ -251,11 +298,12 @@ class TechStackUpdater:
             print("No repositories found or failed to fetch. Aborting update.")
             return
             
-        detected = self.extract_technologies(repos)
+        detected = self.extract_technologies(repos) | ALWAYS_INCLUDE
         categorized = self.categorize_tech(detected)
         markdown_table = self.generate_markdown(categorized)
         
         self.update_readme(markdown_table)
+        self.replace_section(RECENT_MARKER_PATTERN, self.generate_recent_work(repos))
 
 
 if __name__ == "__main__":

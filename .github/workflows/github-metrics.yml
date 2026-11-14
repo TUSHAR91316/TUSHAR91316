@@ -16,7 +16,9 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: github-metrics.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # Accurate stats need a personal access token saved as the METRICS_TOKEN secret.
+          # The default GITHUB_TOKEN only sees this repo ("1 repository", "100% Python").
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: TUSHAR91316
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
